@@ -1,0 +1,104 @@
+@media screen and (min-width:1279px) {
+    header {
+        display: flex;
+        margin: 0px auto 20px auto;
+        align-items: center;
+        max-width: 1500px;
+    }
+
+    #mainMenu {
+        display: none;
+    }
+
+    #exitMenu {
+        display: none;
+    }
+
+    .search {
+        display: flex;
+        position: static;
+        width: 50%;
+        height: 50px;
+        align-items: center;
+    }
+
+    #procurar {
+        padding: 0px;
+        margin: 0px 5px 0px 5px;
+        display: inline-block;
+    }
+
+    #list {
+        position: static;
+        display: block;
+        margin: 0px;
+        width: 18vw;
+    }
+    
+    #categorias {
+        margin-bottom: 120px;
+    }
+    
+    ul #itensCategorias {
+        height: 100px;
+        width: 80%;
+        margin: auto;
+        overflow-y: auto;
+        border-bottom: 1px solid #0000001C;
+    }
+
+    li {
+        display: block;
+        box-shadow: 0px 0px 2px #00000000;
+        height: 30px;
+    }
+
+    main {
+        display: grid;
+        margin: auto;
+        grid-template-areas: 
+        "nav section section"
+        "nav section section"
+        "pag pag pag"
+        "aside aside aside";
+        grid-template-columns: 20vw auto auto ;
+        max-width: 1300px;
+    }
+
+    #nav {
+        grid-area: nav;
+    }
+
+    .container {
+        grid-area: section;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+
+    #coll {
+        grid-area: pag;
+    }
+
+    article {
+        width: 95%;
+    }
+
+    img {
+        width: 130px;
+        height: 130px;
+    }
+
+    #outros {
+        grid-area: aside;
+    }
+    
+    aside div {
+        display: inline-block;
+    }
+    
+    #contatos {
+        display: inline-block;
+    }
+
+}

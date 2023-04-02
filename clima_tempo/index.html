@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clima e Tempo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>
+        Clima e Tempo
+    </h1>
+   
+    <main>
+        <div class="localContainer">
+             <div class="localInput">
+                <input type="text" name="cidade" class="local" id="cidade" placeholder="Cidade" value="Sapé">
+                <input type="text" name="estado" class="local" id="estado" placeholder="Estado" value="Paraíba">
+                <button type="submit" id="buscar"> 
+                     <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+                
+            </div>
+            <span class="material-symbols-outlined">
+                location_on
+            </span>
+            <output id="localName"> Sape Paraiba BR</output>
+            <span id="edit" class="material-symbols-outlined">
+                edit
+            </span>
+        </div>
+        <div class="temp">
+
+            <img class="tempImg" src="./img/sol.png" alt="img do clima">
+            <output id="tempNumber"> 27° </output>
+        </div>
+        <div class="clima">
+            <output class="climaName">Nub</output>
+        </div>
+        <div class="data">
+            <output>25/ 03/ 2023</output>
+        </div>
+        <div class="text">
+            <output> Hoje e clima ta nublado com ventos fortes</output>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
