@@ -94,11 +94,29 @@ const atualizarTexto = function( umidade, vento ) {
     texto.textContent = `Hoje a umidade esta em ${ umidade } ... Com ventos de ate ${ vento }m/s`
 }
 
+const aparecerConteudo = function(  ) {
+
+    const conteudo = document.querySelector('.conteudo')
+
+    conteudo.style.height = '400px'
+}
+
+const sumirConteudo = function(  ) {
+    
+    const conteudo = document.querySelector('.conteudo')
+
+    conteudo.style.height = '0px'
+}
+
 const sumirInputText = function(  ) {
     
     const localInput = document.querySelector('.localInput')
-    
+
+    localInput.style.minWidth = '0px'
+
     localInput.style.width = '0px'
+
+    aparecerConteudo()
     
 }
 
@@ -106,7 +124,7 @@ const aparecerInputText = function(  ) {
     
     const localInput = document.querySelector('.localInput')
 
-    localInput.style.width = '350px'
+    localInput.style.width = '400px'
 }
 
 const atualizarData = function(  ) {
@@ -162,6 +180,7 @@ const buscarCidade = function() {
     const apiOpenW = new OpenWhearth(cidade , estado )
     
     sumirInputText()
+    aparecerConteudo()
     
     const dadosClimaticos = apiOpenW.dadosClimaticos().then( (e)=> {
         
@@ -172,6 +191,7 @@ const buscarCidade = function() {
 const editarCidade = function() {
     
     aparecerInputText()
+    sumirConteudo()
 }
 
 
