@@ -1,4 +1,5 @@
-@media screen and (min-width:1279px) {
+@media screen and (min-width: 1000px)/* and (max-width:1279px)*/
+ {
     header {
         display: flex;
         margin: 0px auto 20px auto;
@@ -23,7 +24,6 @@
     }
 
     #procurar {
-        padding: 0px;
         margin: 0px 5px 0px 5px;
         display: inline-block;
     }
@@ -31,12 +31,16 @@
     #list {
         position: static;
         display: block;
-        margin: 0px;
-        width: 18vw;
+        margin-left: 20px;
+        width: 16vw;
     }
     
     #categorias {
         margin-bottom: 120px;
+    }
+
+    #itensCategorias::-webkit-scrollbar {
+        width: 5px;
     }
     
     ul #itensCategorias {
@@ -48,6 +52,8 @@
     }
 
     li {
+        font-size: 16px;
+        margin: 5px;
         display: block;
         box-shadow: 0px 0px 2px #00000000;
         height: 30px;
@@ -57,11 +63,11 @@
         display: grid;
         margin: auto;
         grid-template-areas: 
-        "nav section section"
-        "nav section section"
-        "pag pag pag"
-        "aside aside aside";
-        grid-template-columns: 20vw auto auto ;
+        "nav section section section"
+        "nav section section section"
+        "pag pag pag pag"
+        "aside aside aside aside";
+        grid-template-columns: 20vw auto auto auto ;
         max-width: 1300px;
     }
 
@@ -95,6 +101,7 @@
     
     aside div {
         display: inline-block;
+        margin: 0px 75px 0px 75px;
     }
     
     #contatos {

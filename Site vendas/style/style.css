@@ -5,11 +5,13 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: serif;
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    background-color: #fafafa;
 }
 
 header {
@@ -17,10 +19,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #fff;
     padding: 20px;
     height: 80px;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 40px;
 }
 
@@ -59,8 +60,8 @@ header {
     text-align: center;
     overflow: hidden;
     overflow-y: auto;
-    transition: all .5s ease;
-    box-shadow: 0px 0px 50px #00000020;
+    transition: all .2s ease;
+    box-shadow: 0px 0px 10px #00000013;
 }
 
 ul #itensCategorias {
@@ -84,12 +85,12 @@ li a {
     text-decoration: none;
     color: black;
     font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
-li a:hover {
-    color: white;
-    background-color: #0318FF45;
+li a:hover, main article:hover {
+    background-color: #f4f4f4;
     border-radius: 10px;
 }
 
@@ -110,7 +111,7 @@ li a:hover {
     height: 30px;
     border-radius: 10px;
     margin-left: 10px;
-    padding: 2px 8px 2px 8px;
+    padding: 3px 8px 3px 8px;
     font-size: 18px;
 }
 
@@ -129,13 +130,14 @@ section {
 article {
     display: block;
     background-color: #fff;
-    width: 330px;
-    height: 250px;
-    border-radius: 20px;
+    min-width: none;
+    max-width: 350px;
+    height: 220px;
+    border-radius: 10px;
     margin: 10px auto;
     padding: 15px;
     overflow: hidden;
-    box-shadow: 0px 0px 8px #0000003D;
+    box-shadow: 0px 0px 8px #00000013;
     
 }
 
@@ -152,7 +154,7 @@ img {
     width: 200px;
     height: 150px;
     margin: auto ;
-    border-bottom: 1px solid #0318FF80;
+    
 }
 
 
@@ -166,7 +168,7 @@ img {
 
 aside {
     display: block;
-    border: 1px solid black ;
+    border-top: 1px solid black ;
 }
 
 aside div {

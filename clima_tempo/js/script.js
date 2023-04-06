@@ -1,8 +1,4 @@
 
-const btnEdit = document.querySelector('#edit')
-
-const btnBuscar = document.querySelector('#buscar')
-
 class OpenWhearth {
     constructor(cidade , estado) {
         this.cidadeInput = cidade
@@ -87,18 +83,26 @@ const atualizarDesc = function( desc ) {
     descricao.textContent = desc
 }
 
+const adicionarData = function( data ) {
+
+    const dataNumber = document.querySelector('#dataNumber')
+
+    dataNumber.textContent = ` ${data[0] } / ${data[1] } / ${data[2] } `
+}
+
 const atualizarTexto = function( umidade, vento ) {
     
     const texto = document.querySelector('.text')
     
-    texto.textContent = `Hoje a umidade esta em ${ umidade } ... Com ventos de ate ${ vento }m/s`
+    texto.innerHTML = `Hoje a umidade esta em ${umidade} <br><br> 
+    Ventos de ate ${vento}m/s`
 }
 
 const aparecerConteudo = function(  ) {
 
     const conteudo = document.querySelector('.conteudo')
 
-    conteudo.style.height = '400px'
+    conteudo.style.height = '350px'
 }
 
 const sumirConteudo = function(  ) {
@@ -131,14 +135,14 @@ const atualizarData = function(  ) {
 
     const dataInfos = new Date()
 
-    const dia = dataInfos.getUTCDay()
+    const dia = dataInfos.getDate()
 
-    const mes = dataInfos.getMonth()
+    const mes = dataInfos.getMonth() + 1
 
     const ano = dataInfos.getFullYear()
 
-    console.log(dia, mes , ano )
-
+    adicionarData([dia, mes, ano])
+    
 }
 
 const atualizarDisplay = function(dataBase) {
@@ -194,8 +198,6 @@ const editarCidade = function() {
     sumirConteudo()
 }
 
-
-
 const enter = function(e) {
 
     e.code === 'Enter' ? buscarCidade() : null 
@@ -205,6 +207,10 @@ const enter = function(e) {
 }
 
 const locais = document.querySelectorAll('.local')
+
+const btnEdit = document.querySelector('#edit')
+
+const btnBuscar = document.querySelector('#buscar')
 
 locais.forEach( (e)=> {
     e.addEventListener('keypress', enter)
