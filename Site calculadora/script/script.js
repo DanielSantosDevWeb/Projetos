@@ -10,14 +10,6 @@ class Calculadora {
         this.valorDisplay = ''
     }
     
-    addValorDisplay(btnPress) {
-
-        this.valorDisplay += new String(btnPress)
-
-        console.log(this.valorDisplay);
-
-    }
-    
     // Adicionando numero ao valor atual
     adicionarNum(num) {
         
@@ -29,8 +21,6 @@ class Calculadora {
         }
         
         this.valorAtual += num
-
-        this.addValorDisplay(num)
         
         this.atualizarDisplay(this.valorAtual)
     }
@@ -48,7 +38,6 @@ class Calculadora {
         
         tela.textContent = valor
 
-        this.addValorDisplay(valor)
     }
     
     // função de adição
@@ -156,8 +145,6 @@ class Calculadora {
         let operador = this.operador
         let vAtual = Number(this.valorAtual)
         let vTotal = Number(this.valorTotal)
-
-        this.addValorDisplay(operacao)
         
         switch (operacao) {
             case '+': 

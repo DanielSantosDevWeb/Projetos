@@ -17,7 +17,7 @@
     <a href="https://DanielSantosDevWeb.github.io/Projetos/clima_tempo">
         Click aqui para entrar
     </a>
-    <p style=" color: #eeeeee ; ">OBS: Acontece um erro no Fetch do codigo JavaSript no github</p>
+    <p style=" color: #dddddd ; ">OBS: Acontece um erro no Fetch do codigo JavaSript no github</p>
 </p>
 
 <h3>Calculadora</h3>

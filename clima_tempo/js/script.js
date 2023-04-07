@@ -8,7 +8,7 @@ class OpenWhearth {
     
     async cordenadas() {
         try {
-            
+
             const infosCityJson = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${this.cidadeInput},${this.estadoInput}&limit=3&appid=${this.key}`)
     
             const cityObj = await infosCityJson.json()
