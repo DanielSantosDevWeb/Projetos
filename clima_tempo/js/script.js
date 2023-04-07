@@ -9,7 +9,7 @@ class OpenWhearth {
     async cordenadas() {
         try {
             
-            const infosCityJson = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${this.cidadeInput},${this.estadoInput}&limit=3&appid=${this.key}`)
+            const infosCityJson = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${this.cidadeInput},${this.estadoInput}&limit=3&appid=${this.key}`)
     
             const cityObj = await infosCityJson.json()
             
@@ -30,7 +30,7 @@ class OpenWhearth {
         try {
             await this.cordenadas()
             
-            const climaJson = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=${this.key}&units=metric&lang=pt_br`)
+            const climaJson = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=${this.key}&units=metric&lang=pt_br`)
             
             const climaObj = await climaJson.json()
                 
@@ -59,7 +59,7 @@ const atualizarImg = function( iconId ) {
     
     const img = document.querySelector('.tempImg')
     
-    img.src = `http://openweathermap.org/img/wn/${ iconId }@2x.png`
+    img.src = `https://openweathermap.org/img/wn/${ iconId }@2x.png`
 }
 
 const atualizarCidade = function( cidade, estado, pais ) {
